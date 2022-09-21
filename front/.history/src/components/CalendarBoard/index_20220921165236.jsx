@@ -3,7 +3,6 @@ import { GridList } from "@material-ui/core";
 import * as styles from "./style.css";
 import dayjs from "dayjs";
 import "dayjs/locale/ja";
-import CalendarElement from "../CalendarElement"
 
 dayjs.locale("ja");
 
@@ -20,17 +19,15 @@ const createCalendar = () => {
         })
 };
 
-
 const calendar = createCalendar();
-console.log(calendar)
 
 const CalendarBoard = () => {
     return (
         <div className={styles.container}>
             <GridList className={styles.grid} cols={7} spacing={0} cellHeight="auto">
                 {calendar.map(c => (
-                    <li key={c.toISOString()}>
-                        <CalendarElement className={styles.element}>{c.format("D")}</CalendarElement>
+                    <li key={c}>
+                        <div className={styles.element}>{c}</div>
                     </li>
                 ))}
             </GridList>

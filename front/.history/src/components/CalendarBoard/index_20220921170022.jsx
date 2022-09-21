@@ -30,7 +30,7 @@ const CalendarBoard = () => {
             <GridList className={styles.grid} cols={7} spacing={0} cellHeight="auto">
                 {calendar.map(c => (
                     <li key={c.toISOString()}>
-                        <CalendarElement className={styles.element}>{c.format("D")}</CalendarElement>
+                        <Cal className={styles.element}>{c.format("D")}</Cal>
                     </li>
                 ))}
             </GridList>
