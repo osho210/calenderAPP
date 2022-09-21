@@ -17,16 +17,10 @@ const CalendarBoard = () => {
             <GridList className={styles.grid} cols={7} spacing={0} cellHeight="auto">
                 {days.map(d => (
                     <li key={d}>
-                        <Typography
-                            className={styles.days}
-                            color="textSecondary"
-                            align="center"
-                            variant="caption"
-                            component="div"
-                        >
-                            {d}
+                        <Typography>
+                            
                         </Typography>
-                    </li>
+                        {d}</li>
                 ))}
                 {calendar.map(c => (
                     <li key={c.toISOString()}>

@@ -24,9 +24,9 @@ const CalendarBoard = () => {
                             variant="caption"
                             component="div"
                         >
-                            {d}
+
                         </Typography>
-                    </li>
+                        </li>
                 ))}
                 {calendar.map(c => (
                     <li key={c.toISOString()}>
