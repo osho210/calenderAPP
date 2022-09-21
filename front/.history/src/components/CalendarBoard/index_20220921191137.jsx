@@ -1,9 +1,11 @@
 import React from "react";
 import { GridList } from "@material-ui/core";
+import * as styles from "./style.css";
 import CalendarElement from "../CalendarElement"
 import { createCalendar } from "../../services/calendar";
-import * as styles from "./style.css";
+
 const calendar = createCalendar();
+console.log(calendar)
 
 const CalendarBoard = () => {
     return (
@@ -16,6 +18,7 @@ const CalendarBoard = () => {
                 ))}
             </GridList>
         </div>
+        
     );
 };
 

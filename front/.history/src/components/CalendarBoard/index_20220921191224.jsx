@@ -1,11 +1,13 @@
 import React from "react";
 import { GridList } from "@material-ui/core";
+import * as styles from "./style.css";
 import CalendarElement from "../CalendarElement"
 import { createCalendar } from "../../services/calendar";
-import * as styles from "./style.css";
+
 const calendar = createCalendar();
 
 const CalendarBoard = () => {
+    console.log("tsevies")
     return (
         <div className={styles.container}>
             <GridList className={styles.grid} cols={7} spacing={0} cellHeight="auto">

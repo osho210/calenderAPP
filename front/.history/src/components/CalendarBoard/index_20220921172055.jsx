@@ -1,9 +1,10 @@
 import React from "react";
 import { GridList } from "@material-ui/core";
-import CalendarElement from "../CalendarElement"
-import { createCalendar } from "../../services/calendar";
 import * as styles from "./style.css";
+import CalendarElement from "../CalendarElement"
+
 const calendar = createCalendar();
+console.log(calendar)
 
 const CalendarBoard = () => {
     return (
@@ -18,7 +19,5 @@ const CalendarBoard = () => {
         </div>
     );
 };
-
-
 
 export default CalendarBoard;
