@@ -2,22 +2,22 @@ import React from "react";
 import * as styles from "./style.css";
 import { Typography } from "@material-ui/core";
 import dayjs from "dayjs";
-import { isSameMonth, isSameDay, isFirstDay, isSomeDay } from "../../services/calendar";
+import { isSameMonth, isSameDay, isFirstDay } from "../../services/calendar";
 
 
 
 const CalendarElement = ({ day }) => {
 
-    const today = dayjs()
+    const isFirstDay = day.date() === 1;
+    const format = isFirstDay ? "M月D日" : "D"
+
+
+    const today = dayjs();
+    const compoareFormat = "YYYYMMDD"
+    const isToday = day.format(compoareFormat) === today.format(compoareFormat)
+
     const isCurrentMonth = isSameMonth(day, today)
     const textColor = isCurrentMonth ? "textPrimary" : "textSecondary";
-
-    const format = isFirstDay(day) ? "M月D日" : "D"
-
-    const isToday = isSomeDay(day, today)
-
-
-
 
     return (
         <div className={styles.element}>

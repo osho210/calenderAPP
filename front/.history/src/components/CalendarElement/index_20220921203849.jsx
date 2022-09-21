@@ -14,10 +14,10 @@ const CalendarElement = ({ day }) => {
 
     const format = isFirstDay(day) ? "M月D日" : "D"
 
-    const isToday = isSomeDay(day, today)
+    const isToday = isSomeDay(day,today) ? "M月D日" : "D"
 
-
-
+    
+    
 
     return (
         <div className={styles.element}>

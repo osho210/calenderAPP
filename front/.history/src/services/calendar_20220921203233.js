@@ -22,4 +22,4 @@ export const isSameMonth = (m1, m2) => {
     return m1.format(format) === m2.format(format)
 }
 
-export const isFirstDay = day => day.date() === 1
+export const isF
