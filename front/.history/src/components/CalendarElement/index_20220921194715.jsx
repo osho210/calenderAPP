@@ -15,7 +15,7 @@ const CalendarElement = ({ day }) => {
                 variant="caption"
                 component="div"
             >
-                {day.format(format)}
+                {day.format("D")}
             </Typography>
         </div>
     );

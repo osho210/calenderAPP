@@ -4,6 +4,7 @@ import CalendarElement from "../CalendarElement"
 import { createCalendar } from "../../services/calendar";
 import * as styles from "./style.css";
 const calendar = createCalendar();
+import dayjs from "dayjs";
 
 const CalendarBoard = () => {
     return (
