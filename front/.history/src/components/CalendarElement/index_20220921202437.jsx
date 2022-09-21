@@ -15,9 +15,8 @@ const CalendarElement = ({ day }) => {
     const compoareFormat = "YYYYMMDD"
     const isToday = day.format(compoareFormat) === today.format(compoareFormat)
 
-    const isCurrentMonth = day.month() === today.month();
-    const textColor = isCurrentMonth ? "textPrimary" : "textSecondary";
-
+    const isCurrentMonth = day.month() = today.month()
+    const textColor = isCurrentMonth ? "textPrimary" : "textSecondary"
     return (
         <div className={styles.element}>
             <Typography

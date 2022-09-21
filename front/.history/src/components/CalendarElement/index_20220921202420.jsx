@@ -15,9 +15,8 @@ const CalendarElement = ({ day }) => {
     const compoareFormat = "YYYYMMDD"
     const isToday = day.format(compoareFormat) === today.format(compoareFormat)
 
-    const isCurrentMonth = day.month() === today.month();
-    const textColor = isCurrentMonth ? "textPrimary" : "textSecondary";
-
+    const isCurrentMonth = day.month() = today.month()
+    const textColor = isCurrentMonth ? "textPrimary" : "textSecondary"
     return (
         <div className={styles.element}>
             <Typography
@@ -28,6 +27,7 @@ const CalendarElement = ({ day }) => {
                 variant="caption"
                 component="div"
             >
+                {/* 日付フォーマットがtodayの場合は処理を実行 */}
                 <span className={isToday ? styles.today : ""}>
                     {day.format(format)}
                 </span>
