@@ -1,8 +1,8 @@
 import dayjs from "dayjs";
 
 export const createCalendar = month => {
-    const firstDay = getMonth(month);
-    const firstDayIndex = firstDay.day();
+    const firstDay = getMounth(month)
+    const firstDayIndex = firstDay.day()
     return Array(35)
         .fill(0)
         //value  ,index , array(現在処理している配列を取得)
@@ -14,9 +14,7 @@ export const createCalendar = month => {
         })
 };
 
-export const getMonth = ({ year, month }) => {
-    return dayjs(`${year}-${month}`);
-};
+export const getMonth = ([])
 
 export const isSomeDay = (d1, d2) => {
     const format = "YYYYMMDD"

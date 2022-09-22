@@ -15,8 +15,8 @@ export const createCalendar = month => {
 };
 
 export const getMonth = ({ year, month }) => {
-    return dayjs(`${year}-${month}`);
-};
+    return dayjs(`${year}-${month}`)
+}
 
 export const isSomeDay = (d1, d2) => {
     const format = "YYYYMMDD"

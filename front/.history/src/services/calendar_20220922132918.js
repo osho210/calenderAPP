@@ -18,10 +18,10 @@ export const getMonth = ({ year, month }) => {
     return dayjs(`${year}-${month}`);
 };
 
-export const isSomeDay = (d1, d2) => {
-    const format = "YYYYMMDD"
-    return d1.format(format) === d2.format(format)
-}
+// export const isSomeDay = (d1, d2) => {
+//     const format = "YYYYMMDD"
+//     return d1.format(format) === d2.format(format)
+// }
 
 export const isSameMonth = (m1, m2) => {
     const format = "YYYYMM";
