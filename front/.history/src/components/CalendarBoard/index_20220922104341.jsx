@@ -16,7 +16,7 @@ const CalendarBoard = () => {
         <div className={styles.container}>
             <GridList className={styles.grid} cols={7} spacing={0} cellHeight="auto">
                 {days.map(day => (
-                    <li key={day}>
+                    <li key={d}>
                         <Typography
                             className={styles.days}
                             color="textSecondary"
@@ -24,7 +24,7 @@ const CalendarBoard = () => {
                             variant="caption"
                             component="div"
                         >
-                            {day}
+                            {d}
                         </Typography>
                     </li>
                 ))}

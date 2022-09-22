@@ -5,10 +5,9 @@ export const createCalendar = () => {
     const firstDayIndex = firstDay.day();
     return Array(35)
         .fill(0)
-        //value  ,index , array(現在処理している配列を取得)
         .map((_, i) => {
             const diffFromFirstDay = i - firstDayIndex;
-            //本日から日付をマイナスして表示
+            //
             const day = firstDay.add(diffFromFirstDay, "day")
             return day
         })

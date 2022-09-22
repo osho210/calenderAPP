@@ -24,7 +24,7 @@ const CalendarBoard = () => {
                             variant="caption"
                             component="div"
                         >
-                            {day}
+                            {d}
                         </Typography>
                     </li>
                 ))}

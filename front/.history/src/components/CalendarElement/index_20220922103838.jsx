@@ -6,13 +6,15 @@ import { isSameMonth, isFirstDay, isSomeDay } from "../../services/calendar";
 
 
 
-const CalendarElement = ({ date }) => {
+const CalendarElement = ({ day }) => {
 
     const today = dayjs()
-    const isCurrentMonth = isSameMonth(date, today)
+    const isCurrentMonth = isSameMonth(day, today)
     const textColor = isCurrentMonth ? "textPrimary" : "textSecondary";
-    const format = isFirstDay(date) ? "M月D日" : "D"
-    const isToday = isSomeDay(date, today)
+
+    const format = isFirstDay(day) ? "M月D日" : "D"
+
+    const isToday = isSomeDay(day, today)
 
 
 
@@ -28,7 +30,7 @@ const CalendarElement = ({ date }) => {
                 component="div"
             >
                 <span className={isToday ? styles.today : ""}>
-                    {date.format(format)}
+                    {day.format(format)}
                 </span>
             </Typography>
         </div>

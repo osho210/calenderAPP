@@ -12,7 +12,7 @@ const CalendarElement = ({ date }) => {
     const isCurrentMonth = isSameMonth(date, today)
     const textColor = isCurrentMonth ? "textPrimary" : "textSecondary";
     const format = isFirstDay(date) ? "M月D日" : "D"
-    const isToday = isSomeDay(date, today)
+    const isToday = isSomeDay(day, today)
 
 
 
@@ -28,7 +28,7 @@ const CalendarElement = ({ date }) => {
                 component="div"
             >
                 <span className={isToday ? styles.today : ""}>
-                    {date.format(format)}
+                    {day.format(format)}
                 </span>
             </Typography>
         </div>

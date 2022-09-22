@@ -28,7 +28,7 @@ const CalendarElement = ({ date }) => {
                 component="div"
             >
                 <span className={isToday ? styles.today : ""}>
-                    {date.format(format)}
+                    {day.format(format)}
                 </span>
             </Typography>
         </div>

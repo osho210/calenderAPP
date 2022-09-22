@@ -15,8 +15,8 @@ const CalendarBoard = () => {
         //1度の処理で上からレンダリングしている
         <div className={styles.container}>
             <GridList className={styles.grid} cols={7} spacing={0} cellHeight="auto">
-                {days.map(day => (
-                    <li key={day}>
+                {days.map(d => (
+                    <li key={d}>
                         <Typography
                             className={styles.days}
                             color="textSecondary"
@@ -24,13 +24,13 @@ const CalendarBoard = () => {
                             variant="caption"
                             component="div"
                         >
-                            {day}
+                            {d}
                         </Typography>
                     </li>
                 ))}
                 {calendar.map(date => (
                     <li key={date.toISOString()}>
-                        <CalendarElement date={date} />
+                        <CalendarElement day={day} />
                     </li>
                 ))}
             </GridList>
