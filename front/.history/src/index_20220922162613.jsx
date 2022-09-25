@@ -14,7 +14,6 @@ const store = createStore(rootReducer)
 
 const App = () => (
     <Provider store={store}>
-        <Navigation />
         <CalendarBoard />
     </Provider>
 )
