@@ -3,13 +3,15 @@ import CalendarBoard from "./presentation";
 import { createCalendar } from "../../services/calendar";
 import { addScheduleOpenDialog } from "../../redux/addSchedule/actions";
 
-const mapStateToProps = state => ({ calendar: state.calendar })
 
 const mapDispatchToProps = dispatch => ({
+    //プロパティに値を格納しているため指定しなくてよい
     openAddScheduleDialog: () => {
-        dispatch(addScheduleOpenDialog());
+        dispatch(addScheduleOpenDialog())
     }
-});
+})
+
+const mapStateToProps = state => ({ calendar: state.calendar })
 
 const mergeProps = (stateProps, dispatchProps) => ({
     ...stateProps,

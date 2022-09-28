@@ -5,12 +5,6 @@ import { addScheduleOpenDialog } from "../../redux/addSchedule/actions";
 
 const mapStateToProps = state => ({ calendar: state.calendar })
 
-const mapDispatchToProps = dispatch => ({
-    openAddScheduleDialog: () => {
-        dispatch(addScheduleOpenDialog());
-    }
-});
-
 const mergeProps = (stateProps, dispatchProps) => ({
     ...stateProps,
     ...dispatchProps,

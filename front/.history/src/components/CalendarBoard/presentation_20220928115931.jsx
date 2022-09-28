@@ -11,6 +11,8 @@ const days = ["日", "月", "火", "水", "木", "金", "土"]
 
 
 const CalendarBoard = ({ calendar, month, openAddScheduleDialog }) => {
+
+
     return (
         <div className={styles.container}>
             <ImageList className={styles.grid} cols={7} gap={0} rowHeight="auto">
@@ -28,7 +30,6 @@ const CalendarBoard = ({ calendar, month, openAddScheduleDialog }) => {
                     </li>
                 ))}
                 {calendar.map(date => (
-                    //consoleは出力されるので関数呼び出しができていない
                     <li key={date.toISOString()} onClick={() => openAddScheduleDialog()}>
                         {/* プロパティの1部変更(date = {date}) */}
                         <CalendarElement date={date} month={month} />
