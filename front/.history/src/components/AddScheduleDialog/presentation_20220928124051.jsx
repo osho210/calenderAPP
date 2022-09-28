@@ -39,7 +39,7 @@ const AddScheduleDialog = ({ schedule: { isDialogOpen }, closeDialog }) => {
             </DialogContent>
             <DialogActions>
                 <Button color="primary" variant="outlined">
-                    保存
+                    
                 </Button>
             </DialogActions>
         </Dialog>

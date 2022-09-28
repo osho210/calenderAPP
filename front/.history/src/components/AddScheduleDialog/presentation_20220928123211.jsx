@@ -26,22 +26,8 @@ const AddScheduleDialog = ({ schedule: { isDialogOpen }, closeDialog }) => {
         <Dialog open={isDialogOpen} onClose={closeDialog} maxWidth="xs" fullWidth>
             <DialogContent>
                 <Title autoFocus fullWidth placeholder="タイトルと日時を追加" />
-                <Grid container spacing={1} alignItems="center" justify="space-between" />
-                <Grid item>
-                    <LocationCityOutlined />
-                </Grid>
-                <Grid item xs={10}>
-                    <TextField style={spacer} fullWidth placeholder="場所を追加" />
-                </Grid>
-                <Grid item xs={10}>
-                    <TextField style={spacer} fullWidth placeholder="説明を追加" />
-                </Grid>
+                <Grid container spacing={1} alignItems="center" justifyContent="" />
             </DialogContent>
-            <DialogActions>
-                <Button color="primary" variant="outlined">
-                    保存
-                </Button>
-            </DialogActions>
         </Dialog>
     )
 }

@@ -37,11 +37,7 @@ const AddScheduleDialog = ({ schedule: { isDialogOpen }, closeDialog }) => {
                     <TextField style={spacer} fullWidth placeholder="説明を追加" />
                 </Grid>
             </DialogContent>
-            <DialogActions>
-                <Button color="primary" variant="outlined">
-                    保存
-                </Button>
-            </DialogActions>
+            
         </Dialog>
     )
 }
