@@ -5,7 +5,6 @@ const init = {
     items: [],
     isLoading: false
 };
-
 const schedulesReducer = (state = init, action) => {
     const { type, payload } = action;
 

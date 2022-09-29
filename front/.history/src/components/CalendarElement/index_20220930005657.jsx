@@ -38,11 +38,10 @@ const CalendarElement = ({ date, month, Schedules }) => {
                     <Schedule key={e.id} schedule={e} />
                 ))}
             </div>
-        </div>
-    );
+            );
 };
 
-export default CalendarElement;
+            export default CalendarElement;
 
 
 

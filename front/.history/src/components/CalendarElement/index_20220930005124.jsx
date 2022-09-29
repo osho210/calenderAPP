@@ -33,11 +33,10 @@ const CalendarElement = ({ date, month, Schedules }) => {
                     {date.format(format)}
                 </span>
             </Typography>
-            <div className={styles.Schedules} >
-                {schedules.map(e => (
-                    <Schedule key={e.id} schedule={e} />
-                ))}
-            </div>
+            <dic className={styles.Schedules} />
+            {schedulesAddItem.map(e => (
+                <Schedule key={e.id} schedule={e} />
+            ))}
         </div>
     );
 };
@@ -47,3 +46,4 @@ export default CalendarElement;
 
 
 
+//https://teratail.com/questions/353471

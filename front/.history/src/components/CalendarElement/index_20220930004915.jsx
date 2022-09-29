@@ -3,12 +3,11 @@ import * as styles from "./style.css";
 import { Typography } from "@material-ui/core";
 import dayjs from "dayjs";
 import { isSameMonth, isFirstDay, isSomeDay, getMonth } from "../../services/calendar";
-import Schedule from "../Schedule";
-import { schedulesAddItem } from "../../redux/schedules/actions";
+import 
 
 
 
-const CalendarElement = ({ date, month, Schedules }) => {
+const CalendarElement = ({ date, month }) => {
     const currentMonth = getMonth(month)
     const isCurrentMonth = isSameMonth(date, currentMonth)
     const textColor = isCurrentMonth ? "textPrimary" : "textSecondary";
@@ -17,7 +16,6 @@ const CalendarElement = ({ date, month, Schedules }) => {
 
     const today = dayjs()
     const isToday = isSomeDay(date, today)
-
 
     return (
         <div className={styles.element}>
@@ -33,11 +31,6 @@ const CalendarElement = ({ date, month, Schedules }) => {
                     {date.format(format)}
                 </span>
             </Typography>
-            <div className={styles.Schedules} >
-                {schedules.map(e => (
-                    <Schedule key={e.id} schedule={e} />
-                ))}
-            </div>
         </div>
     );
 };
@@ -47,3 +40,4 @@ export default CalendarElement;
 
 
 
+//https://teratail.com/questions/353471

@@ -10,7 +10,7 @@ const days = ["日", "月", "火", "水", "木", "金", "土"]
 
 
 //値が変更された場合に再レンダリングされていない
-const CalendarBoard = ({ calendar, month, openAddScheduleDialog }) => {
+const CalendarBoard = ({ calendar, month, openAddScheduleDialog, schedules }) => {
     return (
         <div className={styles.container}>
             <ImageList className={styles.grid} cols={7} gap={0} rowHeight="auto">
