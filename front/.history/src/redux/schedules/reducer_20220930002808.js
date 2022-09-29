@@ -6,7 +6,7 @@ const init = {
     items: [
         {
             id: 1,
-            title: "テスト",
+            title: "test",
             date: dayjs(),
             location: "会議室",
             description: "経営戦略について"

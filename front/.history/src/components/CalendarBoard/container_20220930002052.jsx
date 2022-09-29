@@ -25,11 +25,8 @@ const mergeProps = (stateProps, dispatchProps) => {
         schedules: { items: schedules }
     } = stateProps;
     const calendar = setSchedules(createCalendar(month), schedules)
-    return {
-        ...stateProps,
-        ...dispatchProps,
-        calendar,
-        month
+    return{
+        ...state
     }
 }
 //conect(prpsの制御 , stateの更新)

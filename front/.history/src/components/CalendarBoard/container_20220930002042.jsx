@@ -25,12 +25,6 @@ const mergeProps = (stateProps, dispatchProps) => {
         schedules: { items: schedules }
     } = stateProps;
     const calendar = setSchedules(createCalendar(month), schedules)
-    return {
-        ...stateProps,
-        ...dispatchProps,
-        calendar,
-        month
-    }
 }
 //conect(prpsの制御 , stateの更新)
 //connectで渡す順番にも順序が

@@ -20,17 +20,7 @@ const mapDispatchToProps = dispatch => ({
 
 //この値が関数に渡される
 const mergeProps = (stateProps, dispatchProps) => {
-    const {
-        calendar: month,
-        schedules: { items: schedules }
-    } = stateProps;
-    const calendar = setSchedules(createCalendar(month), schedules)
-    return {
-        ...stateProps,
-        ...dispatchProps,
-        calendar,
-        month
-    }
+    const
 }
 //conect(prpsの制御 , stateの更新)
 //connectで渡す順番にも順序が

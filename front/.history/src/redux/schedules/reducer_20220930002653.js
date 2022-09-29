@@ -1,15 +1,12 @@
 import { SCHEDULES_ADD_ITEM } from "./actions"
-import dayjs from "dayjs";
 
 //reducerに初期値が格納
 const init = {
     items: [
         {
-            id: 1,
-            title: "テスト",
-            date: dayjs(),
-            location: "会議室",
-            description: "経営戦略について"
+            id:1,
+            title:"test",
+            
         }
     ],
     isLoading: false

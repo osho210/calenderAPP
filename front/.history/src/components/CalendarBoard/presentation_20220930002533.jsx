@@ -34,7 +34,7 @@ const CalendarBoard = ({ calendar, month, openAddScheduleDialog, schedules }) =>
                     <li key={date.toISOString()}
                         onClick={() => openAddScheduleDialog(date)}>
                         {/* プロパティの1部変更(date = {date}) */}
-                        <CalendarElement date={date} month={month} schedules={schedules} />
+                        <CalendarElement date={date} month={month} schedules/>
                     </li>
                 ))}
             </ImageList>
