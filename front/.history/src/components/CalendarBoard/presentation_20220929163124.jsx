@@ -27,7 +27,6 @@ const CalendarBoard = ({ calendar, month, openAddScheduleDialog }) => {
                         </Typography>
                     </li>
                 ))}
-                
                 {calendar.map(date => (
                     //consoleは出力されるので関数呼び出しができていない
                     <li key={date.toISOString()}

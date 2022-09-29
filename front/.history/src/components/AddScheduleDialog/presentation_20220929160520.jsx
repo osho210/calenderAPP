@@ -12,15 +12,11 @@ import {
     from "@material-ui/core";
 //ロゴのインポート
 import {
+    Description,
     LocationCityOutlined,
     NotesOutlined,
-    AccessTime,
-    Close
+    AccessTime
 } from "@material-ui/icons";
-
-//cssをインポートする
-import * as styles from "./style.css";
-
 
 //カレンダー
 import { DatePicker } from "@material-ui/pickers";
@@ -43,15 +39,6 @@ const AddScheduleDialog = ({
     return (
         //クリックしたときに表示させるダイアログ
         <Dialog open={isDialogOpen} onClose={closeDialog} maxWidth="xs" fullWidth>
-            {/* 画面右上の×ボタン */}
-            <DialogActions>
-                <div className={styles.closeButton}>
-                    {/* onClick時にダイアログを閉じる */}
-                    <IconButton onClick={closeDialog} size="small">
-                        <Close />
-                    </IconButton>
-                </div>
-            </DialogActions>
             <DialogContent>
                 <Title
                     autoFocus

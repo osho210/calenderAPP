@@ -8,7 +8,6 @@ const mapStateToProps = state => ({ calendar: state.calendar })
 const mapDispatchToProps = dispatch => ({
     openAddScheduleDialog: date => {
         dispatch(addScheduleOpenDialog());
-        //addScheduleSetValueの関数が利用できていなかった
         dispatch(addScheduleSetValue({ date: date }));
     }
 });

@@ -27,11 +27,10 @@ const CalendarBoard = ({ calendar, month, openAddScheduleDialog }) => {
                         </Typography>
                     </li>
                 ))}
-                
                 {calendar.map(date => (
                     //consoleは出力されるので関数呼び出しができていない
-                    <li key={date.toISOString()}
-                        onClick={() => openAddScheduleDialog(date)}>
+                    <li key={date.toISOString()} 
+                    onClick={() => openAddScheduleDialog()}>
                         {/* プロパティの1部変更(date = {date}) */}
                         <CalendarElement date={date} month={month} />
                     </li>

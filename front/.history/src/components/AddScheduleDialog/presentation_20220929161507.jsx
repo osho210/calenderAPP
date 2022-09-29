@@ -46,7 +46,6 @@ const AddScheduleDialog = ({
             {/* 画面右上の×ボタン */}
             <DialogActions>
                 <div className={styles.closeButton}>
-                    {/* onClick時にダイアログを閉じる */}
                     <IconButton onClick={closeDialog} size="small">
                         <Close />
                     </IconButton>

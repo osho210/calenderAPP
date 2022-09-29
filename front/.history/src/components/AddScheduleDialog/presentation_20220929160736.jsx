@@ -43,13 +43,9 @@ const AddScheduleDialog = ({
     return (
         //クリックしたときに表示させるダイアログ
         <Dialog open={isDialogOpen} onClose={closeDialog} maxWidth="xs" fullWidth>
-            {/* 画面右上の×ボタン */}
             <DialogActions>
-                <div className={styles.closeButton}>
-                    {/* onClick時にダイアログを閉じる */}
-                    <IconButton onClick={closeDialog} size="small">
-                        <Close />
-                    </IconButton>
+                <div className="{styles.closeButton">
+                    <
                 </div>
             </DialogActions>
             <DialogContent>
