@@ -18,7 +18,7 @@ const mapDispatchToProps = dispatch => ({
         dispatch(addScheduleSetValue({ date: date }));
     },
     openCurrentScheduleDialog: (schedule, e) => {
-        e.stopPropagation();
+        e.stopPrpaogation();
         dispatch(currentScheduleSetItem(schedule));
         dispatch(currentScheduleOpenDialog())
     }

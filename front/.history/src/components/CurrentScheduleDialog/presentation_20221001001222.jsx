@@ -32,7 +32,7 @@ const CurrentScheduleDialog = ({
                 {item && (
                     <>
                         <div>
-                            <Grid container spacing={1} alignItems="center" justifyContent="space-between" style={spacer(0, 30)} >
+                            <Grid container spacing={1} alignItems="center" justify="space-between" style={spacer(0, 30)} >
                                 <Grid item>
                                     <span className="{styles.box"></span>
                                 </Grid>
@@ -49,7 +49,7 @@ const CurrentScheduleDialog = ({
 
                         {/* item.locationが存在する場合処理を実行 */}
                         {item.location && (
-                            <Grid container spacing={1} alignItems="center" justifyContent="space-between" style={spacer(0, 4)}>
+                            <Grid container spacing={1} alignItems="center" justify="space-between" style={spacer(0, 4)}>
                                 <Grid item>
                                     <LocationOnOutlined />
                                 </Grid>
@@ -64,7 +64,7 @@ const CurrentScheduleDialog = ({
                                 container
                                 spacing={1}
                                 alignItems="center"
-                                justifyContent="space-between"
+                                justify="space-between"
                                 style={spacer(0, 4)}
                             >
                                 <Grid item>
