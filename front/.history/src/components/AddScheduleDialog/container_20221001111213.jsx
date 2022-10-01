@@ -19,7 +19,7 @@ const mapDispatchToProps = dispatch => ({
         dispatch(addScheduleSetValue(value));
     },
     saveSchedule: schedule => {
-        dispatch(asyncSchedulesAddItem(schedule));
+        dispatch(asyncschedulesAddItem(schedule));
         dispatch(addScheduleCloseDialog());
     }
 });

@@ -3,18 +3,10 @@ import {
     schedulesFetchItem,
     schedulesAddItem
 } from "./actions";
-//getは処理 hostはパスが格格納されている
+//getは処理 
 import { get, post } from "../../services/api"
+import { get } from "../../services/api";
 import { formatSchedule } from "../../services/schedule";
-
-export const asyncSchedulesAddItem = schedule => async dispatch => {
-    dispatch(schedulesSetLoading());
-
-    const body = { ...schedule, date: schedule.date.toISOString() };
-    const result = await post("schedules", body)
-    const newSchedule = formatSchedule(result);
-    dispatch(schedulesAddItem(newSchedule))
-}
 
 //初めの引数でリクエストの内容を決めている
 export const asyncSchedulesFetchItem = ({ month, year }) => async dispatch => {

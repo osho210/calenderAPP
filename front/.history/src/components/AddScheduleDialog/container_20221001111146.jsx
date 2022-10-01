@@ -7,7 +7,7 @@ import {
 } from "../../redux/addSchedule/actions";
 
 //日程のreduxの参照
-import { asyncSchedulesAddItem } from "../../redux/schedules/effects";
+import {asyncS}
 //presentationからもらった引数で値の更新
 const mapStateToProps = state => ({ schedule: state.addScedule });
 
@@ -19,7 +19,7 @@ const mapDispatchToProps = dispatch => ({
         dispatch(addScheduleSetValue(value));
     },
     saveSchedule: schedule => {
-        dispatch(asyncSchedulesAddItem(schedule));
+        dispatch(schedulesAddItem(schedule));
         dispatch(addScheduleCloseDialog());
     }
 });

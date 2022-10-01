@@ -12,7 +12,7 @@ export const post = async (path, body) => {
     const options = { ...header, method: "POST", body: JSON.stringify(body) }
     const resp = await fetch(url(path), options);
     const result = await resp.json();
-    return result
+    return re
 }
 
 //fetch処理の抽象メソッド

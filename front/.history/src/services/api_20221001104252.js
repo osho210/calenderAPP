@@ -11,8 +11,7 @@ export const post = async (path, body) => {
     //bodyタグの情報をjsonに変換して受け取っている
     const options = { ...header, method: "POST", body: JSON.stringify(body) }
     const resp = await fetch(url(path), options);
-    const result = await resp.json();
-    return result
+    const result = await resp.json()
 }
 
 //fetch処理の抽象メソッド
