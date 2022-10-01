@@ -123,7 +123,7 @@ const AddScheduleDialog = ({
                 </Grid>
             </DialogContent>
             <DialogActions>
-                <Button color="primary" variant="outlined" onClick={saveSchedule} disabled={!title}>
+                <Button color="primary" variant="outlined" onClick={saveSchedule}>
                     保存
                 </Button>
             </DialogActions>

@@ -32,18 +32,16 @@ import { withStyles } from "@material-ui/core/styles";
 const spacer = { margin: "4px 0" };
 
 const Title = withStyles({
-    root: { fontSize: 22 }
+    root: { marginBottom: 32, fontSize: 22 }
 })(Input)
 
 const AddScheduleDialog = ({
     // Addの引数
-    schedule: { form: { title, location, description, date }, isDialogOpen, isStartEdit },
+    schedule: { form: { title, location, description, date }, isDialogOpen },
     closeDialog,
     setSchedule,
-    saveSchedule,
-    setIsEditStart
+    saveSchedule
 }) => {
-    const isTitleInvalid = !title && isStartEdit;
     return (
         //クリックしたときに表示させるダイアログ
         <Dialog open={isDialogOpen} onClose={closeDialog} maxWidth="xs" fullWidth>
@@ -63,18 +61,9 @@ const AddScheduleDialog = ({
                     placeholder="タイトルと日時を追加"
                     // ボックスに格納された文字をプロップスに格納する
                     onChange={e => setSchedule({ title: e.target.value })}
-                    value={title}
-                    onBlur={setIsEditStart}
-                    error={isTitleInvalid}
-                />
 
-                <div className={styles.validation}>
-                    {isTitleInvalid && (
-                        <Typography variant="caption" component="div" color="error">
-                            タイトルは必須です。
-                        </Typography>
-                    )}
-                </div>
+                    value={title}
+                />
 
                 <Grid container spacing={1} alignItems="center" justifyContent="space-between">
                     <Grid item>
@@ -123,7 +112,7 @@ const AddScheduleDialog = ({
                 </Grid>
             </DialogContent>
             <DialogActions>
-                <Button color="primary" variant="outlined" onClick={saveSchedule} disabled={!title}>
+                <Button color="primary" variant="outlined" onClick={saveSchedule}>
                     保存
                 </Button>
             </DialogActions>

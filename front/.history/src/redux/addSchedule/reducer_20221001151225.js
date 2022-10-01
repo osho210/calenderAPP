@@ -9,18 +9,17 @@ import {
 
 
 const init = {
-    //formが開いているか
     form: {
         title: "",
         description: "",
-        date: dayjs(),
+        date: null,
         location: ""
     },
-    // dialogが開いているか
     isDialogOpen: false,
-    //編集を行っているか
+
+    // 以下の行を追加
     isStartEdit: false
-}
+};
 
 // actionの状態に応じて更新を行う
 const addScheduleReducer = (state = init, action) => {
@@ -36,7 +35,7 @@ const addScheduleReducer = (state = init, action) => {
         case ADD_SCHEDULE_CLOSE_DIALOG:
             return init
         case ADD_SCHEDULE_START_EDIT:
-            return { ...state, isStartEdit: true }
+            return { ...state, isStart: true }
 
         default:
             // return {state} 画面の初期化ができていない

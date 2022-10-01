@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import {
     addScheduleCloseDialog,
     addScheduleSetValue,
-    addScheduleStartEdit
+    addS
 } from "../../redux/addSchedule/actions";
 
 //日程のreduxの参照
@@ -22,11 +22,7 @@ const mapDispatchToProps = dispatch => ({
     saveSchedule: schedule => {
         dispatch(asyncSchedulesAddItem(schedule));
         dispatch(addScheduleCloseDialog());
-    },
-    setIsEditStart: () => {
-        dispatch(addScheduleStartEdit())
     }
-
 });
 
 //ここまでは読めている
@@ -38,7 +34,7 @@ const mergeProps = (stateProps, dispatchProps) => ({
     saveSchedule: () => {
         const { schedule: { form: schedule } } = stateProps;
         dispatchProps.saveSchedule(schedule);
-
+        
     }
 });
 
@@ -47,8 +43,3 @@ export default connect(
     mapDispatchToProps,
     mergeProps
 )(AddScheduleDialog);
-
-
-//入力値のカラチが取得できていない
-// ヴァリデーションの作成はできているが画面上に表示できていない
-// errorの作成処理のエラーがブラックボックス化している

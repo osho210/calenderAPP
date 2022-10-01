@@ -36,7 +36,7 @@ const addScheduleReducer = (state = init, action) => {
         case ADD_SCHEDULE_CLOSE_DIALOG:
             return init
         case ADD_SCHEDULE_START_EDIT:
-            return { ...state, isStartEdit: true }
+            return { ...state, isStart: true }
 
         default:
             // return {state} 画面の初期化ができていない

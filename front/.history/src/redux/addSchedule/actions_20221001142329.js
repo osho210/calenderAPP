@@ -4,10 +4,7 @@ export const ADD_SCHEDULE_SET_VALUE = "ADD_SCHEDULE_SET_VALUE"
 export const ADD_SCHEDULE_OPEN_DIALOG = "ADD_SCHEDULE_OPEN_DIALOG"
 // dialogをクローズさせる
 export const ADD_SCHEDULE_CLOSE_DIALOG = "ADD_SCHEDULE_CLOSE_DIALOG"
-//ヴァリデーションの追加
-export const ADD_SCHEDULE_START_EDIT = "ADD_SCHEDULE_START_EDIT";
-
-
+//ヴぁり
 //actions 
 //更新処理はこれのみのためpayloadが必要 {[key] : value}
 export const addScheduleSetValue = payload => ({
@@ -22,7 +19,3 @@ export const addScheduleOpenDialog = () => ({
 export const addScheduleCloseDialog = () => ({
     type: ADD_SCHEDULE_CLOSE_DIALOG
 });
-
-export const addScheduleStartEdit = () => ({
-    type: ADD_SCHEDULE_START_EDIT
-})

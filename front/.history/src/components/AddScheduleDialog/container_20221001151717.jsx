@@ -24,7 +24,7 @@ const mapDispatchToProps = dispatch => ({
         dispatch(addScheduleCloseDialog());
     },
     setIsEditStart: () => {
-        dispatch(addScheduleStartEdit())
+        dispatch(addScheduleStartEdit)
     }
 
 });

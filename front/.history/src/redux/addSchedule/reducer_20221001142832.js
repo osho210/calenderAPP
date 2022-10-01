@@ -18,7 +18,6 @@ const init = {
     },
     // dialogが開いているか
     isDialogOpen: false,
-    //編集を行っているか
     isStartEdit: false
 }
 
@@ -35,8 +34,8 @@ const addScheduleReducer = (state = init, action) => {
         //初期化をしている
         case ADD_SCHEDULE_CLOSE_DIALOG:
             return init
-        case ADD_SCHEDULE_START_EDIT:
-            return { ...state, isStartEdit: true }
+        case addScheduleStartEdit:
+            return { ...state, isStart: true }
 
         default:
             // return {state} 画面の初期化ができていない

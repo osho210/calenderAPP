@@ -43,7 +43,7 @@ const AddScheduleDialog = ({
     saveSchedule,
     setIsEditStart
 }) => {
-    const isTitleInvalid = !title && isStartEdit;
+    const isTitleInvalid = !title && isStartEdit
     return (
         //クリックしたときに表示させるダイアログ
         <Dialog open={isDialogOpen} onClose={closeDialog} maxWidth="xs" fullWidth>
@@ -69,11 +69,7 @@ const AddScheduleDialog = ({
                 />
 
                 <div className={styles.validation}>
-                    {isTitleInvalid && (
-                        <Typography variant="caption" component="div" color="error">
-                            タイトルは必須です。
-                        </Typography>
-                    )}
+                    {isTitleInvalid}
                 </div>
 
                 <Grid container spacing={1} alignItems="center" justifyContent="space-between">
@@ -123,7 +119,7 @@ const AddScheduleDialog = ({
                 </Grid>
             </DialogContent>
             <DialogActions>
-                <Button color="primary" variant="outlined" onClick={saveSchedule} disabled={!title}>
+                <Button color="primary" variant="outlined" onClick={saveSchedule}>
                     保存
                 </Button>
             </DialogActions>

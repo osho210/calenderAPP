@@ -23,8 +23,8 @@ const mapDispatchToProps = dispatch => ({
         dispatch(asyncSchedulesAddItem(schedule));
         dispatch(addScheduleCloseDialog());
     },
-    setIsEditStart: () => {
-        dispatch(addScheduleStartEdit())
+    setisEditStart: () => {
+        dispatch(addScheduleStartEdit)
     }
 
 });
@@ -50,5 +50,4 @@ export default connect(
 
 
 //入力値のカラチが取得できていない
-// ヴァリデーションの作成はできているが画面上に表示できていない
-// errorの作成処理のエラーがブラックボックス化している
+ヴァリデーションの作成はできているが画面上に表示できていない

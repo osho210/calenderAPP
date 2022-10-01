@@ -24,5 +24,5 @@ export const addScheduleCloseDialog = () => ({
 });
 
 export const addScheduleStartEdit = () => ({
-    type: ADD_SCHEDULE_START_EDIT
+    type: ADD_SCHEDULE_START_EDIT,
 })
