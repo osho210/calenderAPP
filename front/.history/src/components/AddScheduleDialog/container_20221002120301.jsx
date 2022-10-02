@@ -33,11 +33,8 @@ const mapDispatchToProps = dispatch => ({
 //ここまでは読めている
 //propsをpresentationに渡す
 const mergeProps = (stateProps, dispatchProps) => {
-    const {
-        schedule: { form: schedule }
-    } = stateProps;
-    const { saveSchedule, closeDialog } = dispatchProps;
-
+    const { schedule: { form: schedule } } = stateProps
+    const { saveSchedule, closeDialog } = dispatchProps
     return {
         ...stateProps,
         ...dispatchProps,
@@ -49,7 +46,7 @@ const mergeProps = (stateProps, dispatchProps) => {
                 closeDialog();
             }
         }
-    };
+    }
 };
 
 export default connect(

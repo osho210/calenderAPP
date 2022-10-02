@@ -33,12 +33,10 @@ const mapDispatchToProps = dispatch => ({
 //ここまでは読めている
 //propsをpresentationに渡す
 const mergeProps = (stateProps, dispatchProps) => {
-    const {
-        schedule: { form: schedule }
-    } = stateProps;
-    const { saveSchedule, closeDialog } = dispatchProps;
-
+    const { schedule: { form: schedule } } = stateProps
+    const { saveSchedule, closeDialog } = dispatchProps
     return {
+        //引数の中値を展開
         ...stateProps,
         ...dispatchProps,
         saveSchedule: () => {
@@ -46,10 +44,10 @@ const mergeProps = (stateProps, dispatchProps) => {
         },
         closeDialog: () => {
             if (isCloseDialog(schedule)) {
-                closeDialog();
+                closeDialog()
             }
         }
-    };
+    }
 };
 
 export default connect(
