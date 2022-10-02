@@ -36,7 +36,7 @@ const CurrentScheduleDialog = ({
                             <DeleteOutlineOutlined />
                         </IconButton>
                     </Tooltip>
-                    <Tooltip title="閉じる" placement="bottom">
+                    <Tooltip title="閉じる" placement="bottm">
                         <IconButton onClick={closeDialog} size="small">
                             <Close />
                         </IconButton>

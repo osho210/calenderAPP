@@ -52,11 +52,12 @@ const AddScheduleDialog = ({
             <DialogActions>
                 <div className={styles.closeButton}>
                     <Tooltip title="閉じる" placement="bottom">
-                        {/* onClick時にダイアログを閉じる */}
-                        <IconButton onClick={closeDialog} size="small">
-                            <Close />
-                        </IconButton>
+                        
                     </Tooltip>
+                    {/* onClick時にダイアログを閉じる */}
+                    <IconButton onClick={closeDialog} size="small">
+                        <Close />
+                    </IconButton>
                 </div>
             </DialogActions>
             <DialogContent>

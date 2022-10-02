@@ -29,15 +29,14 @@ const Navigation = ({ setNextMonth, setPreviousMonth, setMonth, month }) => {
         カレンダー
       </StyledTypography>
       <Tooltip title="前の月" placement="bottom">
-        <IconButton size="small" onClick={setPreviousMonth}>
-          <ArrowBackIos />
-        </IconButton>
+
+      <IconButton size="small" onClick={setPreviousMonth}>
+        <ArrowBackIos />
+      </IconButton>
       </Tooltip>
-      <Tooltip title="次の月" placement="bottom">
-        <IconButton size="small" onClick={setNextMonth}>
-          <ArrowForwardIos />
-        </IconButton>
-      </Tooltip>
+      <IconButton size="small" onClick={setNextMonth}>
+        <ArrowForwardIos />
+      </IconButton>
 
       <StyledDatePicker
         value={month}

@@ -42,6 +42,7 @@ export const asyncSchedulesAddItem = schedule => async dispatch => {
     } catch (err) {
         console.error(err)
         dispatch(schedulesAsyncFailure(err.message))
+        console.log(err.message + "2")
     }
 }
 
@@ -59,6 +60,8 @@ export const asyncSchedulesDeleteItem = id => async (dispatch, getState) => {
         dispatch(schedulesAsyncFailure(newSchedules))
     } catch (err) {
         console.error(err.message)
+        console.log(err.message + "3")
+
     }
 }
 

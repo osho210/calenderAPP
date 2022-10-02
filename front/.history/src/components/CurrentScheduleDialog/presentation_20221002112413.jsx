@@ -6,7 +6,7 @@ import {
     DialogActions,
     Grid,
     Typography,
-    Tooltip   //hover時の表示などの有益なテキスト
+    Tooltip
 } from "@material-ui/core";
 import {
     Close,
@@ -30,17 +30,16 @@ const CurrentScheduleDialog = ({
         <Dialog open={isDialogOpen} onClose={closeDialog} maxWidth="xs" fullWidth>
             <DialogActions>
                 <div className={styles.closeButton}>
-                    {/* placementは配置の選択肢 */}
                     <Tooltip title="削除" placement="bottom">
                         <IconButton onClick={deleteItem} size="small">
                             <DeleteOutlineOutlined />
                         </IconButton>
                     </Tooltip>
-                    <Tooltip title="閉じる" placement="bottom">
+                    <Tooltrip title="閉じる" placement="">
                         <IconButton onClick={closeDialog} size="small">
                             <Close />
                         </IconButton>
-                    </Tooltip>
+                    </Tooltrip>
                 </div>
             </DialogActions>
             <DialogContent>

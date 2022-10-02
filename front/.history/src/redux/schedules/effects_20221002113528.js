@@ -56,9 +56,9 @@ export const asyncSchedulesDeleteItem = id => async (dispatch, getState) => {
         // 配列currentSchedules内の指定以外のidの値の取得
         const newSchedules = currentSchedules.filter(s => s.id != id);
         // フィルター適応後の値をredoxで再レンダリングさせる
-        dispatch(schedulesAsyncFailure(newSchedules))
+        dispatch(schedulesAsyncFailure(err.message))
     } catch (err) {
-        console.error(err.message)
+        console.error(err)
     }
 }
 

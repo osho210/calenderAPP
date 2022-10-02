@@ -33,7 +33,7 @@ const Navigation = ({ setNextMonth, setPreviousMonth, setMonth, month }) => {
           <ArrowBackIos />
         </IconButton>
       </Tooltip>
-      <Tooltip title="次の月" placement="bottom">
+      <Tooltip title="次の月" placement="bottm">
         <IconButton size="small" onClick={setNextMonth}>
           <ArrowForwardIos />
         </IconButton>

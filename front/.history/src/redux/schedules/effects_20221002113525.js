@@ -20,8 +20,6 @@ export const asyncSchedulesFetchItem = ({ month, year }) => async dispatch => {
         // 通信を含む構文は文章が正しくてもエラーを吐く恐れがある(サーバーが落ちるなど)
         // const result = await get(`schedules`);
 
-        const result = await get(`schedules?month=${month}&year=${year}`);
-
         // 文字列で受け取っていたデータを日付型に変更
         const formatedSchedule = result.map(r => formatSchedule(r));
         dispatch(schedulesFetchItem(formatedSchedule))
@@ -56,9 +54,9 @@ export const asyncSchedulesDeleteItem = id => async (dispatch, getState) => {
         // 配列currentSchedules内の指定以外のidの値の取得
         const newSchedules = currentSchedules.filter(s => s.id != id);
         // フィルター適応後の値をredoxで再レンダリングさせる
-        dispatch(schedulesAsyncFailure(newSchedules))
+        dispatch(schedulesAsyncFailure(err.message))
     } catch (err) {
-        console.error(err.message)
+        console.error(err)
     }
 }
 

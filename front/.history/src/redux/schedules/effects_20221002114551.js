@@ -59,6 +59,8 @@ export const asyncSchedulesDeleteItem = id => async (dispatch, getState) => {
         dispatch(schedulesAsyncFailure(newSchedules))
     } catch (err) {
         console.error(err.message)
+        console.error(err.message)
+
     }
 }
 

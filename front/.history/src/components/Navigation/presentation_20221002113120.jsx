@@ -33,11 +33,9 @@ const Navigation = ({ setNextMonth, setPreviousMonth, setMonth, month }) => {
           <ArrowBackIos />
         </IconButton>
       </Tooltip>
-      <Tooltip title="次の月" placement="bottom">
-        <IconButton size="small" onClick={setNextMonth}>
-          <ArrowForwardIos />
-        </IconButton>
-      </Tooltip>
+      <IconButton size="small" onClick={setNextMonth}>
+        <ArrowForwardIos />
+      </IconButton>
 
       <StyledDatePicker
         value={month}
